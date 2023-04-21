@@ -1,0 +1,87 @@
+module vga_colorbar_top(
+		// input
+		input					sys_clk				,
+		input					sys_rst_n			,
+		// output
+		output		[15:0]		data_to_screen		,
+		output					HSYNC				,
+		output					FSYNC				
+);
+	
+	//// define ////
+	wire [15:0] pixel_data;
+	//wire [15:0] data_to_screen;
+	wire [ 9:0] pixel_xpos;
+	wire [ 9:0] pixel_ypos;
+	wire		driver_clk;
+	assign driver_clk = sys_clk;
+
+	//// main code ////
+	
+	/// inst ///
+	
+	vga_colorbar_driver U_vga_colorbar_driver(
+			.driver_clk				(driver_clk			),
+			.sys_rst_n				(sys_rst_n			),
+			.data_from_display		(pixel_data			),
+			.data_to_screen			(data_to_screen		),
+			.Hsync					(HSYNC				),
+			.Fsync					(FSYNC				),
+			.pixel_xpos				(pixel_xpos			),
+			.pixel_ypos				(pixel_ypos			) 
+	);
+	
+	
+	vga_colorbar_display U_vga_colorbar_display(
+			.driver_clk				(driver_clk			),
+	        .sys_rst_n				(sys_rst_n			),
+	        .pixel_xpos				(pixel_xpos			),
+	        .pixel_ypos				(pixel_ypos			),
+	        .pixel_data	            (pixel_data			)
+	);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+endmodule

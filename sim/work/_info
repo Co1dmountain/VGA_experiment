@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ic/project/Sdram_Controller/sim
+vvga_colorbar_display
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 _:RzMQDW9L4NidZC]MY@b2
+IY8ngXlhX8LToRBkjBRV:W3
+Z1 dD:/altera/project/earnmoney/snake_game/VGA_driver/sim
+w1682000177
+8D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_display.v
+FD:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_display.v
+L0 1
+Z2 OL;L;10.5;63
+Z3 !s108 1682001519.000000
+!s107 D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_display.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_display.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+vvga_colorbar_driver
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ghf5:X3O`OK:]9U462:6e0
+IXSEddFe2L3nYCbDk;bFgF1
+R1
+w1682001507
+8D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_driver.v
+FD:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_driver.v
+L0 1
+R2
+Z6 !s108 1682001520.000000
+!s107 D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_driver.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_driver.v|
+!i113 0
+R4
+R5
+vvga_colorbar_top
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ?9eMXk:UO77R2IUEfMBJF0
+I93_12FK4:mBF@g[A`W1Ze3
+R1
+w1682000560
+8D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_top.v
+FD:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_top.v
+L0 1
+R2
+R6
+!s107 D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_top.v|
+!i113 0
+R4
+R5
+vvga_colorbar_top_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 CLmWVA>3A[AdhY30Xz`RT1
+I`z]8h:e39WoMXZAnO[`:T1
+R1
+w1682001034
+8D:\altera\project\earnmoney\snake_game\VGA_driver\sim\vga_colorbar_top_tb.v
+FD:\altera\project\earnmoney\snake_game\VGA_driver\sim\vga_colorbar_top_tb.v
+L0 3
+R2
+R3
+!s107 D:\altera\project\earnmoney\snake_game\VGA_driver\sim\vga_colorbar_top_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\altera\project\earnmoney\snake_game\VGA_driver\sim\vga_colorbar_top_tb.v|
+!i113 0
+R4
+R5
