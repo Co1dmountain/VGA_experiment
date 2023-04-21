@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_colorbar
-Fri Apr 21 17:12:00 2023
+Fri Apr 21 18:39:00 2023
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -14,17 +14,20 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: vga_colorbar_driver:U_vga_colorbar_driver
- 14. Parameter Settings for User Entity Instance: vga_colorbar_display:U_vga_colorbar_display
- 15. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 16. SignalTap II Logic Analyzer Settings
- 17. Elapsed Time Per Partition
- 18. Connections to In-System Debugging Instance "auto_signaltap_0"
- 19. Analysis & Synthesis Messages
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated
+ 15. Parameter Settings for User Entity Instance: vga_colorbar_driver:U_vga_colorbar_driver
+ 16. Parameter Settings for User Entity Instance: vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component
+ 17. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. SignalTap II Logic Analyzer Settings
+ 20. Elapsed Time Per Partition
+ 21. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -50,18 +53,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 21 17:12:00 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 21 18:39:00 2023       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; vga_colorbar                                ;
 ; Top-level Entity Name              ; vga_colorbar_top                            ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 2,007                                       ;
-;     Total combinational functions  ; 843                                         ;
-;     Dedicated logic registers      ; 1,655                                       ;
-; Total registers                    ; 1655                                        ;
+; Total logic elements               ; 2,087                                       ;
+;     Total combinational functions  ; 934                                         ;
+;     Dedicated logic registers      ; 1,683                                       ;
+; Total registers                    ; 1683                                        ;
 ; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 105,472                                     ;
+; Total memory bits                  ; 367,616                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -169,64 +172,69 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; ../src/vga_colorbar_top.v        ; yes             ; User Verilog HDL File        ; D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_top.v     ;         ;
-; ../src/vga_colorbar_driver.v     ; yes             ; User Verilog HDL File        ; D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_driver.v  ;         ;
-; ../src/vga_colorbar_display.v    ; yes             ; User Verilog HDL File        ; D:/altera/project/earnmoney/snake_game/VGA_driver/src/vga_colorbar_display.v ;         ;
-; sld_signaltap.vhd                ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_signaltap.vhd             ;         ;
-; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd        ;         ;
-; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_ela_control.vhd           ;         ;
-; lpm_shiftreg.tdf                 ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_shiftreg.tdf              ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_constant.inc              ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/dffeea.inc                    ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                ;         ;
-; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_mbpmg.vhd                 ;         ;
-; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd  ;         ;
-; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_buffer_manager.vhd        ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                 ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                    ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/altram.inc                    ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
-; db/altsyncram_av14.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/altsyncram_av14.tdf ;         ;
-; db/altsyncram_ijq1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/altsyncram_ijq1.tdf ;         ;
-; altdpram.tdf                     ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/altdpram.tdf                  ;         ;
-; memmodes.inc                     ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/others/maxplus2/memmodes.inc                ;         ;
-; a_hdffe.inc                      ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/a_hdffe.inc                   ;         ;
-; alt_le_rden_reg.inc              ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/alt_le_rden_reg.inc           ;         ;
-; altsyncram.inc                   ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/altsyncram.inc                ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.tdf                   ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/muxlut.inc                    ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/bypassff.inc                  ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/altshift.inc                  ;         ;
-; db/mux_7oc.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/mux_7oc.tdf         ;         ;
-; lpm_decode.tdf                   ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.tdf                ;         ;
-; declut.inc                       ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/declut.inc                    ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_compare.inc               ;         ;
-; db/decode_rqf.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/decode_rqf.tdf      ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_counter.tdf               ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.inc               ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/cmpconst.inc                  ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_counter.inc               ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/alt_counter_stratix.inc       ;         ;
-; db/cntr_ddi.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/cntr_ddi.tdf        ;         ;
-; db/cmpr_bcc.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/cmpr_bcc.tdf        ;         ;
-; db/cntr_m4j.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/cntr_m4j.tdf        ;         ;
-; db/cntr_qbi.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/cntr_qbi.tdf        ;         ;
-; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/cmpr_9cc.tdf        ;         ;
-; db/cntr_gui.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/cntr_gui.tdf        ;         ;
-; db/cmpr_5cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/altera/project/earnmoney/snake_game/VGA_driver/prj/db/cmpr_5cc.tdf        ;         ;
-; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_rom_sr.vhd                ;         ;
-; sld_hub.vhd                      ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_hub.vhd                   ;         ;
-; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction       ; d:/altera/13.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd              ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------+---------+
+; ../src/vga_colorbar_top.v        ; yes             ; User Verilog HDL File                  ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/src/vga_colorbar_top.v     ;         ;
+; ../src/vga_colorbar_driver.v     ; yes             ; User Verilog HDL File                  ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/src/vga_colorbar_driver.v  ;         ;
+; ../src/vga_colorbar_display.v    ; yes             ; User Verilog HDL File                  ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/src/vga_colorbar_display.v ;         ;
+; ip.v                             ; yes             ; User Wizard-Generated File             ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/ip.v                   ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                               ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/altram.inc                                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
+; db/altsyncram_0e71.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/altsyncram_0e71.tdf ;         ;
+; 0.mif                            ; yes             ; Auto-Found Memory Initialization File  ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/0.mif                  ;         ;
+; db/decode_4oa.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/decode_4oa.tdf      ;         ;
+; db/mux_3kb.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/mux_3kb.tdf         ;         ;
+; sld_signaltap.vhd                ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/sld_signaltap.vhd                            ;         ;
+; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                       ;         ;
+; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_ela_control.vhd                          ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_shiftreg.tdf                             ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_constant.inc                             ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/dffeea.inc                                   ;         ;
+; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_mbpmg.vhd                                ;         ;
+; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                 ;         ;
+; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_buffer_manager.vhd                       ;         ;
+; db/altsyncram_av14.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/altsyncram_av14.tdf ;         ;
+; db/altsyncram_ijq1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/altsyncram_ijq1.tdf ;         ;
+; altdpram.tdf                     ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/altdpram.tdf                                 ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/others/maxplus2/memmodes.inc                               ;         ;
+; a_hdffe.inc                      ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/a_hdffe.inc                                  ;         ;
+; alt_le_rden_reg.inc              ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/alt_le_rden_reg.inc                          ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/altsyncram.inc                               ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.tdf                                  ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/muxlut.inc                                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/bypassff.inc                                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/altshift.inc                                 ;         ;
+; db/mux_7oc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/mux_7oc.tdf         ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.tdf                               ;         ;
+; declut.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/declut.inc                                   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_compare.inc                              ;         ;
+; db/decode_rqf.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/decode_rqf.tdf      ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_counter.tdf                              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.inc                              ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/cmpconst.inc                                 ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/lpm_counter.inc                              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                           ; d:/altera/13.0/quartus/libraries/megafunctions/alt_counter_stratix.inc                      ;         ;
+; db/cntr_ddi.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/cntr_ddi.tdf        ;         ;
+; db/cmpr_bcc.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/cmpr_bcc.tdf        ;         ;
+; db/cntr_m4j.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/cntr_m4j.tdf        ;         ;
+; db/cntr_qbi.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/cntr_qbi.tdf        ;         ;
+; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/cmpr_9cc.tdf        ;         ;
+; db/cntr_gui.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/cntr_gui.tdf        ;         ;
+; db/cmpr_5cc.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/db/cmpr_5cc.tdf        ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_rom_sr.vhd                               ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_hub.vhd                                  ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction                 ; d:/altera/13.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd                             ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -234,29 +242,29 @@ applicable agreement for further details.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 2,007   ;
+; Estimated Total logic elements              ; 2,087   ;
 ;                                             ;         ;
-; Total combinational functions               ; 843     ;
+; Total combinational functions               ; 934     ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 434     ;
-;     -- 3 input functions                    ; 219     ;
-;     -- <=2 input functions                  ; 190     ;
+;     -- 4 input functions                    ; 491     ;
+;     -- 3 input functions                    ; 216     ;
+;     -- <=2 input functions                  ; 227     ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 730     ;
-;     -- arithmetic mode                      ; 113     ;
+;     -- normal mode                          ; 808     ;
+;     -- arithmetic mode                      ; 126     ;
 ;                                             ;         ;
-; Total registers                             ; 1655    ;
-;     -- Dedicated logic registers            ; 1655    ;
+; Total registers                             ; 1683    ;
+;     -- Dedicated logic registers            ; 1683    ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
 ; I/O pins                                    ; 36      ;
-; Total memory bits                           ; 105472  ;
+; Total memory bits                           ; 367616  ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ; Maximum fan-out node                        ; sys_clk ;
 ; Maximum fan-out                             ; 1078    ;
-; Total fan-out                               ; 9911    ;
-; Average fan-out                             ; 3.75    ;
+; Total fan-out                               ; 11181   ;
+; Average fan-out                             ; 3.96    ;
 +---------------------------------------------+---------+
 
 
@@ -265,9 +273,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                     ; Library Name ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |vga_colorbar_top                                                                                       ; 843 (45)          ; 1655 (18)    ; 105472      ; 0            ; 0       ; 0         ; 36   ; 0            ; |vga_colorbar_top                                                                                                                                                                                                                                                                                                                                       ;              ;
-;    |sld_hub:auto_hub|                                                                                   ; 120 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                      ;              ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 119 (81)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                         ;              ;
+; |vga_colorbar_top                                                                                       ; 934 (45)          ; 1683 (18)    ; 367616      ; 0            ; 0       ; 0         ; 36   ; 0            ; |vga_colorbar_top                                                                                                                                                                                                                                                                                                                                       ;              ;
+;    |sld_hub:auto_hub|                                                                                   ; 118 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                      ;              ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 117 (79)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                         ;              ;
 ;          |sld_rom_sr:hub_info_reg|                                                                      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                 ;              ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                               ;              ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                     ; 590 (1)           ; 1507 (206)   ; 105472      ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                        ;              ;
@@ -407,32 +415,44 @@ applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                        ; 103 (103)         ; 103 (103)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                          ;              ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                     ; 21 (21)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                       ;              ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                     ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                     ;              ;
-;    |vga_colorbar_display:U_vga_colorbar_display|                                                        ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display                                                                                                                                                                                                                                                                                           ;              ;
-;    |vga_colorbar_driver:U_vga_colorbar_driver|                                                          ; 84 (84)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_driver:U_vga_colorbar_driver                                                                                                                                                                                                                                                                                             ;              ;
+;    |vga_colorbar_display:U_vga_colorbar_display|                                                        ; 85 (50)           ; 32 (30)      ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display                                                                                                                                                                                                                                                                                           ;              ;
+;       |ip:rom0|                                                                                         ; 35 (0)            ; 2 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display|ip:rom0                                                                                                                                                                                                                                                                                   ;              ;
+;          |altsyncram:altsyncram_component|                                                              ; 35 (0)            ; 2 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component                                                                                                                                                                                                                                                   ;              ;
+;             |altsyncram_0e71:auto_generated|                                                            ; 35 (0)            ; 2 (2)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated                                                                                                                                                                                                                    ;              ;
+;                |decode_4oa:deep_decode|                                                                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated|decode_4oa:deep_decode                                                                                                                                                                                             ;              ;
+;                |mux_3kb:mux2|                                                                           ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated|mux_3kb:mux2                                                                                                                                                                                                       ;              ;
+;    |vga_colorbar_driver:U_vga_colorbar_driver|                                                          ; 96 (96)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_colorbar_top|vga_colorbar_driver:U_vga_colorbar_driver                                                                                                                                                                                                                                                                                             ;              ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                                      ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+------+
-; Name                                                                                                                                                                                                                              ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+------+
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_av14:auto_generated|altsyncram_ijq1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 1024         ; 103          ; 1024         ; 103          ; 105472 ; None ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                                       ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------+
+; Name                                                                                                                                                                                                                              ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF   ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_av14:auto_generated|altsyncram_ijq1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 1024         ; 103          ; 1024         ; 103          ; 105472 ; None  ;
+; vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated|ALTSYNCRAM                                                                                                     ; AUTO ; ROM            ; 16384        ; 16           ; --           ; --           ; 262144 ; 0.mif ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                  ;
-+----------------------------------------------------------------------------+------------------------------------------------------------------------+
-; Register name                                                              ; Reason for Removal                                                     ;
-+----------------------------------------------------------------------------+------------------------------------------------------------------------+
-; vga_colorbar_display:U_vga_colorbar_display|pixel_data[1..4]               ; Merged with vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]  ;
-; vga_colorbar_display:U_vga_colorbar_display|pixel_data[5..9,16..19,25..28] ; Merged with vga_colorbar_display:U_vga_colorbar_display|pixel_data[29] ;
-; vga_colorbar_display:U_vga_colorbar_display|pixel_data[20..23]             ; Merged with vga_colorbar_display:U_vga_colorbar_display|pixel_data[24] ;
-; vga_colorbar_display:U_vga_colorbar_display|pixel_data[10..14]             ; Merged with vga_colorbar_display:U_vga_colorbar_display|pixel_data[15] ;
-; Total Number of Removed Registers = 26                                     ;                                                                        ;
-+----------------------------------------------------------------------------+------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                             ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                       ; IP Include File                                                           ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display|ip:rom0 ; D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/ip.v ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                  ;
++----------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                              ; Reason for Removal                     ;
++----------------------------------------------------------------------------+----------------------------------------+
+; vga_colorbar_display:U_vga_colorbar_display|pixel_data[5..9,16..19,25..29] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 14                                     ;                                        ;
++----------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -440,12 +460,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1655  ;
+; Total registers                              ; 1683  ;
 ; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 33    ;
-; Number of registers using Asynchronous Clear ; 619   ;
+; Number of registers using Asynchronous Clear ; 645   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 550   ;
+; Number of registers using Clock Enable       ; 564   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -479,16 +499,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |vga_colorbar_top|vga_colorbar_driver:U_vga_colorbar_driver|v_cnt[2]                                                    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |vga_colorbar_top|rst_cnt[2]                                                                                            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |vga_colorbar_top|vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]                                            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |vga_colorbar_top|vga_colorbar_driver:U_vga_colorbar_driver|v_cnt[0]                                                    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |vga_colorbar_top|rst_cnt[4]                                                                                            ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ;
 ; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 52 LEs               ; 36 LEs                 ; Yes        ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; Yes        ; |vga_colorbar_top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                          ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                           ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -510,14 +538,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: vga_colorbar_display:U_vga_colorbar_display ;
-+----------------+------------+------------------------------------------------------------+
-; Parameter Name ; Value      ; Type                                                       ;
-+----------------+------------+------------------------------------------------------------+
-; H_DISP         ; 1010000000 ; Unsigned Binary                                            ;
-; V_DISP         ; 0111100000 ; Unsigned Binary                                            ;
-+----------------+------------+------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                 ;
++------------------------------------+----------------------+----------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                              ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                              ;
+; WIDTH_A                            ; 16                   ; Signed Integer                                                       ;
+; WIDTHAD_A                          ; 14                   ; Signed Integer                                                       ;
+; NUMWORDS_A                         ; 16384                ; Signed Integer                                                       ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                              ;
+; WIDTH_B                            ; 1                    ; Untyped                                                              ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                              ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                              ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                       ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                              ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                              ;
+; INIT_FILE                          ; 0.mif                ; Untyped                                                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                              ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                              ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                              ;
+; CBXI_PARAMETER                     ; altsyncram_0e71      ; Untyped                                                              ;
++------------------------------------+----------------------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -581,6 +659,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                ;
++-------------------------------------------+-------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                               ;
++-------------------------------------------+-------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                   ;
+; Entity Instance                           ; vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                 ;
+;     -- WIDTH_A                            ; 16                                                                                  ;
+;     -- NUMWORDS_A                         ; 16384                                                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                        ;
+;     -- WIDTH_B                            ; 1                                                                                   ;
+;     -- NUMWORDS_B                         ; 1                                                                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                           ;
++-------------------------------------------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; SignalTap II Logic Analyzer Settings                                                                                                                                                                                                                                    ;
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
@@ -611,127 +709,127 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; HSYNC                                                           ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|LessThan1~1           ; N/A     ;
 ; data_to_screen[0]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
 ; data_to_screen[0]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[10]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[10]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[11]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[11]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[12]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[12]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[13]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[13]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[14]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[14]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[15]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[15]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~9  ; N/A     ;
-; data_to_screen[16]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[16]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[17]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[17]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[18]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[18]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[19]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[19]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[1]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[1]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[20]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[20]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[21]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[21]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[22]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[22]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[23]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[23]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[24]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[24]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~10 ; N/A     ;
-; data_to_screen[25]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[25]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[26]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[26]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[27]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[27]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[28]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[28]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[29]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[29]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[2]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[2]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[3]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[3]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[4]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[4]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[0]~7   ; N/A     ;
-; data_to_screen[5]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[5]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[6]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[6]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[7]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[7]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[8]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[8]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[9]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
-; data_to_screen[9]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[5]~8   ; N/A     ;
+; data_to_screen[10]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~12 ; N/A     ;
+; data_to_screen[10]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[10]~12 ; N/A     ;
+; data_to_screen[11]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[11]~13 ; N/A     ;
+; data_to_screen[11]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[11]~13 ; N/A     ;
+; data_to_screen[12]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[12]~14 ; N/A     ;
+; data_to_screen[12]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[12]~14 ; N/A     ;
+; data_to_screen[13]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[13]~15 ; N/A     ;
+; data_to_screen[13]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[13]~15 ; N/A     ;
+; data_to_screen[14]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[14]~16 ; N/A     ;
+; data_to_screen[14]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[14]~16 ; N/A     ;
+; data_to_screen[15]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[15]~17 ; N/A     ;
+; data_to_screen[15]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[15]~17 ; N/A     ;
+; data_to_screen[16]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[16]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[17]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[17]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[18]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[18]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[19]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[19]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[1]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[1]~8   ; N/A     ;
+; data_to_screen[1]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[1]~8   ; N/A     ;
+; data_to_screen[20]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~18 ; N/A     ;
+; data_to_screen[20]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[20]~18 ; N/A     ;
+; data_to_screen[21]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[21]~19 ; N/A     ;
+; data_to_screen[21]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[21]~19 ; N/A     ;
+; data_to_screen[22]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[22]~20 ; N/A     ;
+; data_to_screen[22]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[22]~20 ; N/A     ;
+; data_to_screen[23]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[23]~21 ; N/A     ;
+; data_to_screen[23]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[23]~21 ; N/A     ;
+; data_to_screen[24]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[24]~22 ; N/A     ;
+; data_to_screen[24]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[24]~22 ; N/A     ;
+; data_to_screen[25]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[25]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[26]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[26]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[27]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[27]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[28]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[28]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[29]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[29]                                              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[2]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[2]~9   ; N/A     ;
+; data_to_screen[2]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[2]~9   ; N/A     ;
+; data_to_screen[3]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[3]~10  ; N/A     ;
+; data_to_screen[3]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[3]~10  ; N/A     ;
+; data_to_screen[4]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[4]~11  ; N/A     ;
+; data_to_screen[4]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|data_to_screen[4]~11  ; N/A     ;
+; data_to_screen[5]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[5]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[6]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[6]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[7]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[7]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[8]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[8]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[9]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
+; data_to_screen[9]                                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                            ; N/A     ;
 ; driver_clk                                                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; driver_clk                                                      ; N/A     ;
 ; driver_clk                                                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; driver_clk                                                      ; N/A     ;
 ; sys_clk                                                         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; sys_clk                                                         ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[12] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[12] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[13] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[13] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[14] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[14] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[10]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[10]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[11]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[11]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[12] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[12]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[12] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[12]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[13] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[13]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[13] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[13]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[14] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[14]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[14] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[14]      ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[15] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[15] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[15]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[16] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[16] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[17] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[17] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[18] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[18] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[19] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[19] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[20] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[20] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[21] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[21] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[22] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[22] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[23] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[23] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[16] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[16] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[17] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[17] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[18] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[18] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[19] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[19] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[1]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[1]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[20] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[20]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[20] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[20]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[21] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[21]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[21] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[21]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[22] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[22]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[22] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[22]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[23] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[23]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[23] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[23]      ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[24] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[24] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[24]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[25] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[25] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[26] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[26] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[27] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[27] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[28] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[28] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[29] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[29] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[0]       ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
-; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[29]      ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[25] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[25] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[26] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[26] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[27] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[27] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[28] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[28] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[29] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[29] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[2]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[2]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[3]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[3]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[4]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_display:U_vga_colorbar_display|pixel_data[4]       ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
+; vga_colorbar_driver:U_vga_colorbar_driver|data_from_display[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                                                             ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|h_cnt[0]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|h_cnt[0]              ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|h_cnt[0]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|h_cnt[0]              ; N/A     ;
 ; vga_colorbar_driver:U_vga_colorbar_driver|h_cnt[1]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; vga_colorbar_driver:U_vga_colorbar_driver|h_cnt[1]              ; N/A     ;
@@ -821,24 +919,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri Apr 21 17:11:56 2023
+    Info: Processing started: Fri Apr 21 18:38:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_colorbar -c vga_colorbar
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/src/ccd97_pll2_bb.v
+Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/vga_experiment/src/ccd97_pll2_bb.v
     Info (12023): Found entity 1: ccd97_pll2
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/src/vga_colorbar_top.v
+Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/vga_experiment/src/vga_colorbar_top.v
     Info (12023): Found entity 1: vga_colorbar_top
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/src/vga_colorbar_driver.v
+Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/vga_experiment/src/vga_colorbar_driver.v
     Info (12023): Found entity 1: vga_colorbar_driver
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/src/vga_colorbar_display.v
+Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/vga_experiment/src/vga_colorbar_display.v
     Info (12023): Found entity 1: vga_colorbar_display
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/src/ccd97_pll2.v
+Info (12021): Found 1 design units, including 1 entities, in source file /altera/project/earnmoney/snake_game/vga_driver/vga_experiment/src/ccd97_pll2.v
     Info (12023): Found entity 1: ccd97_pll3
+Info (12021): Found 1 design units, including 1 entities, in source file ip.v
+    Info (12023): Found entity 1: ip
 Info (12127): Elaborating entity "vga_colorbar_top" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at vga_colorbar_top.v(33): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "vga_colorbar_driver" for hierarchy "vga_colorbar_driver:U_vga_colorbar_driver"
 Warning (10230): Verilog HDL assignment warning at vga_colorbar_driver.v(93): truncated value with size 32 to match size of target (30)
 Info (12128): Elaborating entity "vga_colorbar_display" for hierarchy "vga_colorbar_display:U_vga_colorbar_display"
+Info (12128): Elaborating entity "ip" for hierarchy "vga_colorbar_display:U_vga_colorbar_display|ip:rom0"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "0.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "16384"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "14"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0e71.tdf
+    Info (12023): Found entity 1: altsyncram_0e71
+Info (12128): Elaborating entity "altsyncram_0e71" for hierarchy "vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated"
+Critical Warning (127005): Memory depth (16384) in the design file differs from memory depth (9600) in the Memory Initialization File "D:/altera/project/earnmoney/snake_game/VGA_driver/VGA_experiment/prj/0.mif" -- setting initial value for remaining addresses to 0
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_4oa.tdf
+    Info (12023): Found entity 1: decode_4oa
+Info (12128): Elaborating entity "decode_4oa" for hierarchy "vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated|decode_4oa:deep_decode"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_3kb.tdf
+    Info (12023): Found entity 1: mux_3kb
+Info (12128): Elaborating entity "mux_3kb" for hierarchy "vga_colorbar_display:U_vga_colorbar_display|ip:rom0|altsyncram:altsyncram_component|altsyncram_0e71:auto_generated|mux_3kb:mux2"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_av14.tdf
     Info (12023): Found entity 1: altsyncram_av14
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ijq1.tdf
@@ -863,6 +990,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_5cc
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "data_to_screen[5]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[6]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[7]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[8]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[9]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[16]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[17]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[18]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[19]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[25]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[26]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[27]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[28]" is stuck at GND
+    Warning (13410): Pin "data_to_screen[29]" is stuck at GND
     Warning (13410): Pin "BLANK" is stuck at VCC
     Warning (13410): Pin "SYNC" is stuck at GND
 Info (13000): Registers with preset signals will power-up high
@@ -872,15 +1013,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 207 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2170 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2327 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 2026 logic cells
-    Info (21064): Implemented 103 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4684 megabytes
-    Info: Processing ended: Fri Apr 21 17:12:00 2023
+    Info (21061): Implemented 2119 logic cells
+    Info (21064): Implemented 167 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4698 megabytes
+    Info: Processing ended: Fri Apr 21 18:39:00 2023
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 
